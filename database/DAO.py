@@ -40,6 +40,7 @@ class DAO():
 
         cursor.execute(query, (year, year,))
 
+
         for row in cursor:
             result.append((Team(**row)))
 

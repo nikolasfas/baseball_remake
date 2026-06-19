@@ -50,6 +50,7 @@ class Model:
                 if n != m:
                     self._graph.add_edge(n, m, weight=n.salaries + m.salaries)
 
+
     def getNeighbours(self, team):
 
         neighTeams = []

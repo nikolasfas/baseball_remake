@@ -59,6 +59,7 @@ class Controller:
 
         self._view.update_page()
 
+
     def handleTeams(self, e):
         self._year = int(e.control.value)
         self._teams = self._model.getAllTeams(self._year)

@@ -46,6 +46,7 @@ class View(ft.UserControl):
         self._page.controls.append(row2)
         self._page.controls.append(row3)
 
+
         for i in range(0,200):
             self._txtOutSquadre.controls.append(ft.Text(f"Squadra {i}"))
 
