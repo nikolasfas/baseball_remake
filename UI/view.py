@@ -24,7 +24,8 @@ class View(ft.UserControl):
         self._title = ft.Text("TdP Baseball Manager 2026", color="blue", size=24)
         # self._page.controls.append(self._title)
 
-        self._ddAnno = ft.Dropdown(label="Anno", width=200, alignment=ft.alignment.top_left)
+        self._ddAnno = ft.Dropdown(label="Anno", width=200, alignment=ft.alignment.top_left, on_change=self._controller.handleTeams)
+        self._controller._fillDDYears()
 
         row1 = ft.Row([ft.Container(self._title, width=500),
                        ft.Container(None, width=0),
@@ -34,7 +35,7 @@ class View(ft.UserControl):
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
         row2 = ft.Row([cont, self._btnCreaGrafo], alignment=ft.MainAxisAlignment.CENTER, vertical_alignment=ft.CrossAxisAlignment.END)
 
-        self._ddSquadra = ft.Dropdown(label="Squadra")
+        self._ddSquadra = ft.Dropdown(label="Squadra", on_change= self._controller.handleChoiceTeam)
         self._btnDettagli = ft.ElevatedButton(text="Dettagli", on_click=self._controller.handleDettagli)
         self._btnPercorso = ft.ElevatedButton(text="Percorso", on_click=self._controller.handlePercorso)
         row3 = ft.Row([ft.Container(self._ddSquadra, width=250),
